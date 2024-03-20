@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area {
+            border: 1px solid black;
+            width: 400px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Practice4</h2>
+    
+        <fieldset>
+            <legend>구매 정보</legend>
+            <li>
+                구매자 : <input type="text" id="name" placeholder="구매자의 이름을 입력하세요">
+            </li>
+            <li>
+                상품명 : <input type="text" id="product" placeholder="구매 상품 명을 입력하세요">
+            </li>
+            <li>
+                가격 : <input type="text" id="price" placeholder="구매 가격을 입력하세요">
+            </li>
+            <li>
+                구매 수량 : <input type="number" id="amount" min="10" max="100" step="10" value=" " placeholder="최소 10.">
+            </li>
+            <li>
+                납품 등급 : <input type="range" id="score" min="1" max="9" step="2">
+            </li>
+            <li>
+                기타 사항 : <textarea id="descript" cols="30" rows="5"></textarea>
+            </li>
+        </fieldset>
+
+        <br>
+
+        <button onclick="accessName();">입력 값 출력하기</button>
+
+        <br><br>
+        <div id="area1" class="area"></div>
+        <!-- 
+        구매자 : xxx
+        상품명 : xxx
+        가격 : xxx 
+        구매 수량 : xxx
+        납품 등급 : x 등급
+        기타 사항 : XXXXXX
+         -->
+        <script>
+            function accessName() {
+                const buyer = document.getElementById('name').value;
+                const product = document.getElementById('product').value;
+                const price = document.getElementById('price').value;
+                const amount = document.getElementById('amount').value;
+                const score = document.getElementById('score').value;
+                const descript = document.getElementById('descript').value;
+
+                const str = `구매자 : ${buyer}<br>상품명 : ${product}<br>가격 : ${price}<br>구매 수량 : ${amount}<br>납품 등급 : ${score}<br>기타 사항 : ${descript}`;
+                document.querySelector('#area1').innerHTML = str;
+            }
+        </script>
+    
+</body>
+
+</html>

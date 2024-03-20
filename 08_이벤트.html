@@ -148,12 +148,16 @@
     <a href="http://www.naver/com" onclick="test6();">네이버로 이동</a>
 
     <script>
-        function test6(){
-            if(5 > 3) {
+        function test6() {
+            if (5 > 3) {
                 return false;
             }
         }
     </script>
+
+
+
+
 
     <form action="test.do">
         아이디 : <input type="text" name="userId">
@@ -161,8 +165,19 @@
     </form>
 
     <script>
-        function validate(){
-            return false;
+        function validate() {
+            //영문자 또는 숫자로만 5~12글자 이하가 맞는지
+            //조건에 부합하면 return X
+            //조건에 맞지 않으면 return false;
+
+            const userId = document.getElementById('user_id').value;
+
+            const regRxp = /^[a-zA-Z0-9]{5,12}$/
+            if (regRxp.test(userId)) { // regRxp.test(userId) => 조건에 부합하지 않을 때 false -> if를 실행하기위해서는 true로 변환
+                alert("유효한 아이디가 아닙니다.")
+                return false;
+            }
+            
         }
     </script>
 </body>

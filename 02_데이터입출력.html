@@ -70,15 +70,15 @@
             // 위의 div 요소 가져와서 안에 값을 확인 / 변경
 
             // div 요소객체를 가져와서 변수에 담아두기
-            let divE1 = document.getElementById("area1");
+            let divEl = document.getElementById("area1");
             console.log(divE1);
 
             // 선택된 요소의 속성에 접근 가능 (.)
-            console.log(divE1.id); // id : 해당 요소의 아이디 속성
-            console.log(divE1.className); // className : 해당요소의 클래스 속성
+            console.log(divEl.id); // id : 해당 요소의 아이디 속성
+            console.log(divEl.className); // className : 해당요소의 클래스 속성
 
-            console.log(divE1.innerHTML); // innerHTML : 요소의 content 영역 안의 html까지 전부 포함해서 가져온다
-            console.log(divE1.innerText); // innerText : 요소의 content 영역 안의 텍스트만 포함해서 가져온다(html x)
+            console.log(divEl.innerHTML); // innerHTML : 요소의 content 영역 안의 html까지 전부 포함해서 가져온다
+            console.log(divEl.innerText); // innerText : 요소의 content 영역 안의 텍스트만 포함해서 가져온다(html x)
 
             divE1.innerHTML = "<b>innerText로 속성값 변경함 ^^</b>";
 

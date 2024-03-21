@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            border: 1px solid #6990b3;
+            background-color: #deebf7;
+            min-width: 400px;
+            min-height: 500px;
+            margin-top: 20px;
+        }
+
+        #div2 {
+            width: 300px;
+            height: 350px;
+            border: 1px solid #d3dae1;
+            background-color: #ededed;
+            margin: 30px auto;
+            padding: 50px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #div3 {
+            
+        }
+
+        #div3>input {
+            float: right;
+        }
+
+        #div3>* {
+            /* margin-bottom: 10px; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #div4{
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            padding: auto;
+            box-sizing: border-box;
+            background-color: #c5e0b4;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">
+                <b>아이디</b><input type="text"> <br>
+                <b>패스워드</b> <input type="password" id="userPwd" onclick="pwdInput()"><br>
+                <b>패스워드 확인</b> <input type="password"><br>
+                <b>이메일</b> <input type="email"><br>
+                <b>주소</b> <input type="text">
+
+            </div>
+            
+            <br>
+
+            <div id="div4" onclick="test1()">
+                
+               <b>가 입</b> 
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function test1() {
+            const area = document.getElementById('userPwd');
+
+            area.innerHTML += "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자";
+
+        }
+    </script>
+
+</body>
+
+</html>
